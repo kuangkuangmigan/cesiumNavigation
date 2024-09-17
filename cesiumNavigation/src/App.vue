@@ -89,7 +89,7 @@ const drawPolyline = (polyArray) => {
 onMounted(() => {
 
     // 初始化cesium
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmMjE1M2IyNy03ZTU1LTRmYTUtYTI2OS1jZjI2ZTRmNTU3Y2IiLCJpZCI6MjMyOTE5LCJpYXQiOjE3MjI5MjgwMDB9.r-V590GMmLIYY31pN17z0KBxUapfaXN_xciHahKDaXA';
+    Cesium.Ion.defaultAccessToken = ' ';//在Cesium官方创建账户拿到的Token
     viewer = new Cesium.Viewer('container', {
         animation: false,
         baseLayerPicker: false,
@@ -106,10 +106,10 @@ onMounted(() => {
 
     // 引入高德地图方便使用对应的API
     window._AMapSecurityConfig = {
-        securityJsCode: "0e052cef14c393f5d126ef33f78bb34f",
+        securityJsCode: "  ",//你的高德开发安全密钥
     };
     AMapLoader.load({
-        key: "c23f6d06721dd49b9e5eb9a55210b0b6", // 申请好的Web端开发者Key，首次调用 load 时必填
+        key: " ", // 申请好的Web端开发者Key，你的高德开发Key
         version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
         plugins: ["AMap.AutoComplete", "AMap.Driving", "AMap.Geocoder"], //需要使用的的插件列表，如比例尺'AMap.Scale'，支持添加多个如：['...','...']
     })
